@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6332fb87-3664-49c4-bafc-4c047afae37b" name="Changes" comment="Commit.">
-      <change beforePath="$PROJECT_DIR$/lib/screens/dock/dock_items.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/dock/dock_items.dart" afterDir="false" />
+    <list default="true" id="6332fb87-3664-49c4-bafc-4c047afae37b" name="Changes" comment="Final commit.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731351470168</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Final commit.">
+      <option name="closed" value="true" />
+      <created>1731351970894</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731351970894</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -84,6 +92,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit." />
+    <MESSAGE value="Final commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="Final commit." />
   </component>
 </project>
