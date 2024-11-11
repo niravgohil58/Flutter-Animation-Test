@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 
 class Dock extends StatefulWidget {
+
   final List<IconData> icons;
 
   const Dock({super.key, required this.icons});
 
   @override
-  _DockState createState() => _DockState();
+  State<Dock> createState() => _DockState();
 }
 
 class _DockState extends State<Dock> {
+
   late List<IconData> iconList;
   int? draggedIndex;
   double dragOffsetX = 0.0;
@@ -34,13 +36,41 @@ class _DockState extends State<Dock> {
     });
   }
 
-
   void _onDragEnd() {
     setState(() {
       draggedIndex = null;
       dragPosition = 0.0;
-      iconList = List.from(widget.icons);
     });
+  }
+
+  double _calculatePosition(int index) {
+    if (draggedIndex == null) {
+      return index * 60.0;
+    }
+
+    if (index == draggedIndex) {
+      return dragPosition;
+    }
+
+    if (dragPosition > index * 60.0 && draggedIndex! > index) {
+      return index * 60.0 + 40.0;
+    } else if (dragPosition < index * 60.0 && draggedIndex! < index) {
+      return index * 60.0 - 40.0;
+    }
+
+    return index * 60.0;
+  }
+
+  double _getIconSize(int index) {
+    if (draggedIndex == null) return 48.0;
+
+    const double maxScale = 60.0;
+    const double minScale = 48.0;
+    const double proximityThreshold = 80.0;
+
+    double distance = (dragPosition - (index * 60.0)).abs();
+    double scaleFactor = (1 - (distance / proximityThreshold)).clamp(0, 1);
+    return minScale + (maxScale - minScale) * scaleFactor;
   }
 
   @override
@@ -64,8 +94,8 @@ class _DockState extends State<Dock> {
                 height: _getIconSize(index),
                 margin: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: Colors.black12,
                   borderRadius: BorderRadius.circular(8),
+                  color: Colors.black12,
                 ),
                 child: Icon(
                   iconList[index],
@@ -79,39 +109,4 @@ class _DockState extends State<Dock> {
       ),
     );
   }
-
-  /// Calculates position based on drag or default index.
-  double _calculatePosition(int index) {
-    if (draggedIndex == null) {
-      return index * 60.0;
-    }
-
-    if (index == draggedIndex) {
-      return dragPosition;
-    }
-
-    // Adjust position for icons on left or right of the dragged icon
-    if (dragPosition > index * 60.0 && draggedIndex! > index) {
-      return index * 60.0 + 40.0; // Shift right
-    } else if (dragPosition < index * 60.0 && draggedIndex! < index) {
-      return index * 60.0 - 40.0; // Shift left
-    }
-
-    return index * 60.0;
-  }
-
-  /// Adjusts icon size based on distance to dragged icon.
-  double _getIconSize(int index) {
-    if (draggedIndex == null) return 48.0;
-
-    const double maxScale = 60.0;
-    const double minScale = 48.0;
-    const double proximityThreshold = 80.0;
-
-    double distance = (dragPosition - (index * 60.0)).abs();
-    double scaleFactor = (1 - (distance / proximityThreshold)).clamp(0, 1);
-    return minScale + (maxScale - minScale) * scaleFactor;
-  }
 }
-
-

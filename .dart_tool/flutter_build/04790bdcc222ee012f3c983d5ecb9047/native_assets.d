@@ -1,1 +1,0 @@
- /Users/imac/Documents/photos/Practical\ Demos\ 2024/Flutter-Animation-Test/.dart_tool/flutter_build/04790bdcc222ee012f3c983d5ecb9047/native_assets.yaml: 

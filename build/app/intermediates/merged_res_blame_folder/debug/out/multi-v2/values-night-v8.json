@@ -4,7 +4,7 @@
             "outputFile": "com.example.flutter_test_animation.app-mergeDebugResources-9:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/imac/Documents/photos/Practical Demos 2024/Flutter-Animation-Test/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/imac/Documents/flutter_test_animation/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
