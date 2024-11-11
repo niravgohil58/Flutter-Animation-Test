@@ -2,11 +2,11 @@ com.example.flutter_test_animation.app-jetified-window-1.0.0-beta04-0 /Users/ima
 com.example.flutter_test_animation.app-jetified-window-java-1.0.0-beta04-1 /Users/imac/.gradle/caches/transforms-3/93717ec511eddfed25a91a7f1c3fb89f/transformed/jetified-window-java-1.0.0-beta04/res
 com.example.flutter_test_animation.app-core-1.6.0-2 /Users/imac/.gradle/caches/transforms-3/f6f5e04330ecbd147af205838d9004d6/transformed/core-1.6.0/res
 com.example.flutter_test_animation.app-jetified-annotation-experimental-1.1.0-3 /Users/imac/.gradle/caches/transforms-3/fabe607cd74858a47d1da48c3735df29/transformed/jetified-annotation-experimental-1.1.0/res
-com.example.flutter_test_animation.app-debug-4 /Users/imac/Documents/flutter_test_animation/android/app/src/debug/res
-com.example.flutter_test_animation.app-main-5 /Users/imac/Documents/flutter_test_animation/android/app/src/main/res
-com.example.flutter_test_animation.app-pngs-6 /Users/imac/Documents/flutter_test_animation/build/app/generated/res/pngs/debug
-com.example.flutter_test_animation.app-resValues-7 /Users/imac/Documents/flutter_test_animation/build/app/generated/res/resValues/debug
-com.example.flutter_test_animation.app-rs-8 /Users/imac/Documents/flutter_test_animation/build/app/generated/res/rs/debug
-com.example.flutter_test_animation.app-mergeDebugResources-9 /Users/imac/Documents/flutter_test_animation/build/app/intermediates/incremental/debug/mergeDebugResources/merged.dir
-com.example.flutter_test_animation.app-mergeDebugResources-10 /Users/imac/Documents/flutter_test_animation/build/app/intermediates/incremental/debug/mergeDebugResources/stripped.dir
-com.example.flutter_test_animation.app-merged_res-11 /Users/imac/Documents/flutter_test_animation/build/app/intermediates/merged_res/debug
+com.example.flutter_test_animation.app-debug-4 /Users/imac/Documents/photos/Practical Demos 2024/Flutter-Animation-Test/android/app/src/debug/res
+com.example.flutter_test_animation.app-main-5 /Users/imac/Documents/photos/Practical Demos 2024/Flutter-Animation-Test/android/app/src/main/res
+com.example.flutter_test_animation.app-pngs-6 /Users/imac/Documents/photos/Practical Demos 2024/Flutter-Animation-Test/build/app/generated/res/pngs/debug
+com.example.flutter_test_animation.app-resValues-7 /Users/imac/Documents/photos/Practical Demos 2024/Flutter-Animation-Test/build/app/generated/res/resValues/debug
+com.example.flutter_test_animation.app-rs-8 /Users/imac/Documents/photos/Practical Demos 2024/Flutter-Animation-Test/build/app/generated/res/rs/debug
+com.example.flutter_test_animation.app-mergeDebugResources-9 /Users/imac/Documents/photos/Practical Demos 2024/Flutter-Animation-Test/build/app/intermediates/incremental/debug/mergeDebugResources/merged.dir
+com.example.flutter_test_animation.app-mergeDebugResources-10 /Users/imac/Documents/photos/Practical Demos 2024/Flutter-Animation-Test/build/app/intermediates/incremental/debug/mergeDebugResources/stripped.dir
+com.example.flutter_test_animation.app-merged_res-11 /Users/imac/Documents/photos/Practical Demos 2024/Flutter-Animation-Test/build/app/intermediates/merged_res/debug
