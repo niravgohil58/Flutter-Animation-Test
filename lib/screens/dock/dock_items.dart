@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 
 class Dock extends StatefulWidget {
-
   final List<IconData> icons;
 
   const Dock({super.key, required this.icons});
 
   @override
-  State<Dock> createState() => _DockState();
+  _DockState createState() => _DockState();
 }
 
 class _DockState extends State<Dock> {
-
   late List<IconData> iconList;
   int? draggedIndex;
   double dragOffsetX = 0.0;
@@ -30,6 +28,7 @@ class _DockState extends State<Dock> {
     });
   }
 
+
   void _onDragUpdate(int index, DragUpdateDetails details) {
     setState(() {
       dragPosition = details.globalPosition.dx - dragOffsetX;
@@ -40,7 +39,45 @@ class _DockState extends State<Dock> {
     setState(() {
       draggedIndex = null;
       dragPosition = 0.0;
+      iconList = List.from(widget.icons);
     });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 100,
+      child: Stack(
+        children: List.generate(iconList.length, (index) {
+          return AnimatedPositioned(
+            duration: const Duration(milliseconds: 200),
+            left: _calculatePosition(index),
+            top: draggedIndex == index ? 20 : 30,
+            child: GestureDetector(
+              onHorizontalDragStart: (details) => _onDragStart(index, details),
+              onHorizontalDragUpdate: (details) => _onDragUpdate(index, details),
+              onHorizontalDragEnd: (_) => _onDragEnd(),
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 200),
+                curve: Curves.easeOut,
+                width: _getIconSize(index),
+                height: _getIconSize(index),
+                margin: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Colors.black12,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Icon(
+                  iconList[index],
+                  color: Colors.white,
+                  size: _getIconSize(index) * 0.5,
+                ),
+              ),
+            ),
+          );
+        }),
+      ),
+    );
   }
 
   double _calculatePosition(int index) {
@@ -72,41 +109,5 @@ class _DockState extends State<Dock> {
     double scaleFactor = (1 - (distance / proximityThreshold)).clamp(0, 1);
     return minScale + (maxScale - minScale) * scaleFactor;
   }
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 100,
-      child: Stack(
-        children: List.generate(iconList.length, (index) {
-          return AnimatedPositioned(
-            duration: const Duration(milliseconds: 200),
-            left: _calculatePosition(index),
-            top: draggedIndex == index ? 20 : 30,
-            child: GestureDetector(
-              onHorizontalDragStart: (details) => _onDragStart(index, details),
-              onHorizontalDragUpdate: (details) => _onDragUpdate(index, details),
-              onHorizontalDragEnd: (_) => _onDragEnd(),
-              child: AnimatedContainer(
-                duration: const Duration(milliseconds: 200),
-                curve: Curves.easeOut,
-                width: _getIconSize(index),
-                height: _getIconSize(index),
-                margin: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: Colors.black12,
-                ),
-                child: Icon(
-                  iconList[index],
-                  color: Colors.white,
-                  size: _getIconSize(index) * 0.5,
-                ),
-              ),
-            ),
-          );
-        }),
-      ),
-    );
-  }
 }
+
