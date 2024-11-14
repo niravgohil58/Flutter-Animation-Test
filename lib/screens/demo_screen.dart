@@ -10,7 +10,7 @@ class DemoScreen extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.white,
         body: Center(
-          child: Dock(
+          child: DockMacOs(
             icons: [
               Icons.person,
               Icons.message,

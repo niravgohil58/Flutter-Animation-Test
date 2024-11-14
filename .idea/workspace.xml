@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6332fb87-3664-49c4-bafc-4c047afae37b" name="Changes" comment="Final commit.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/demo_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/demo_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/dock/dock_items.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/dock/dock_items.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +95,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731355037667</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Final commit.">
+      <option name="closed" value="true" />
+      <created>1731531974672</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731531974672</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

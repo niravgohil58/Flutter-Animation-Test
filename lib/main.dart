@@ -31,7 +31,7 @@ class MyAppNew extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.black,
         body: Center(
-          child: Dock(
+          child: DockMacOs(
             icons: [
               Icons.home,
               Icons.search,
